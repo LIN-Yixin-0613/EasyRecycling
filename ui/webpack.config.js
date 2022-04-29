@@ -11,7 +11,7 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        use: 'babel-loader',
+        loader: 'babel-loader',
         options: { presets: ['@babel/env','@babel/preset-react'] },
       },
       {
