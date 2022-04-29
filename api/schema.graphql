@@ -1,0 +1,85 @@
+
+   
+scalar GraphQLDate
+
+enum StatusType {
+  New
+  Assigned
+  Fixed
+  Closed
+}
+
+type customer {
+  customerName: String!
+  customerTel: String!
+  amount: Int!
+}
+
+type Booking {
+  seriesNo: Int!
+  pName: String!
+  phoneNumber: String!
+  date: String!
+}
+
+type packaging {
+  packagingID: Int!
+  packagingName: String!
+  points: Int!
+}
+
+type record {
+  packagingID: Int!
+  customerTel: String!
+  date: String!
+}
+
+input recordInputs {
+  packagingID: Int!
+  customerTel: String!
+  date: String!
+}
+
+input customerInputs {
+  customerName: String!
+  customerTel: String!
+}
+
+input packagingInputs {
+  packagingName: String!
+  points: Int!
+}
+
+input BookingInputs {
+  seriesNo: Int!
+  pName: String!
+  phoneNumber: String!
+  date: String!
+}
+
+input BlackInputs {
+  blackName: String
+  blackPhone: String
+}
+
+input addAmountInputs {
+  customerTel: String! 
+  points: Int!
+}
+
+type Query {
+  reservationList: [Booking!]!
+  bookedSeats: Int!
+  recordList(customerTel: String!): [record!]! 
+  getName(customerTel: String!): [customer!]!
+  getPackaging(packagingID: Int!): [packaging!]!
+  customerList(amount: Int!): [customer!]!
+}
+
+type Mutation {
+  createAccount(newCustomer: customerInputs!): customer!
+  addRecord(newRecord: recordInputs!): record! 
+  createPackaging(newPackaging: packagingInputs!): packaging!
+  addAmount(addAmountInfo: addAmountInputs!): customer!
+}
+
