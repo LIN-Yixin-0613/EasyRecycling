@@ -107,7 +107,7 @@ export default class Whole extends React.Component {
 
           <ReactRouterDOM.Switch>
 
-            <ReactRouterDOM.Redirect exact from="/" to="/AddRecycling"/>
+            <ReactRouterDOM.Redirect exact from="/" to="/Login"/>
             
             <ReactRouterDOM.Route path="/AddRecycling">
               <AddRecycling addRecycling = {this.addRecycling}/>

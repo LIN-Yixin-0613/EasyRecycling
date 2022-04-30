@@ -12,6 +12,9 @@ export default class AddRecycling extends React.Component {
     const packagingID = form.packagingID.value;
     const customerTel = form.customerTel.value;
     const date = (new Date()).toDateString();
+    if (packagingID == "" || customerTel == "") {
+      alert("please fill the blanks")
+    }
     // const newRecord = {packagingID, customerTel, date};
     const newRecord = {};
     newRecord.packagingID = parseInt(packagingID);
@@ -31,11 +34,11 @@ export default class AddRecycling extends React.Component {
         <legend>Add Recycling Record</legend>
         <div class="form-group">
           <label for="packagingID" class="form-label">packagingID</label>
-          <input type="text" class="form-control" id="packagingID"/>
+          <input type="number" class="form-control" id="packagingID"/>
         </div>
         <div class="form-group">
           <label for="customerTel" class="form-label">customerTel</label>
-          <input type="text" class="form-control" id="customerTel"/>
+          <input type="number" class="form-control" id="customerTel"/>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

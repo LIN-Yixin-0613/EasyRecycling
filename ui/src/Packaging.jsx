@@ -7,8 +7,11 @@ export default class Packaging extends React.Component {
     PassValue() {
       const form = document.forms.packagingForm
       const name = form.packagingName.value;
-      const points = parseInt(form.points.value);
-      const newPackaging = {packagingName: name, points: points};
+      const points = form.points.value;
+      if (name == "" || points == "") {
+        alert("please fill the blanks");
+      }
+      const newPackaging = {packagingName: name, points: parseInt(points)};
       const {createPackaging} = this.props;
       createPackaging(newPackaging);
       form.packagingName.value = "";
@@ -27,7 +30,7 @@ export default class Packaging extends React.Component {
         </div>
         <div class="form-group">
           <label for="points">points</label>
-          <input type="text" class="form-control" id="points"/>
+          <input type="number" class="form-control" id="points"/>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

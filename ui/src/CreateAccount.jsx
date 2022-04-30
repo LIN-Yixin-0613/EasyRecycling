@@ -8,6 +8,9 @@ export default class CreateAccount extends React.Component {
       const form = document.forms.accountForm
       const name = form.customerName.value;
       const tel = form.customerTel.value;
+      if (name == "" || tel == "") {
+        alert("please fill the blanks")
+      }
       const newCustomer = {customerName: name, customerTel: tel};
       const {createAccount} = this.props;
       createAccount(newCustomer);
@@ -30,12 +33,12 @@ export default class CreateAccount extends React.Component {
         <legend>Create a Customer Account</legend>
         <div class="form-group">
           <label for="customerName">customerName</label>
-          <input type="text" class="form-control" id="customerName"/>
+          <input type="text" class="form-control" id="customerName" data-bv-notempty-message="required"/>
           {/* <input type="text" class="form-control" id="packagingID" aria-label="Username"/> */}
         </div>
         <div class="form-group">
           <label for="customerTel">customerTel</label>
-          <input type="text" class="form-control" id="customerTel"/>
+          <input type="number" class="form-control" id="customerTel"/>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

@@ -140,7 +140,9 @@ export default class RecyclingList extends React.Component {
   PassValue() {
     const customerTel = document.forms.customerTelForm.customerTel.value;
     //从whole那里继承这个函数
-    
+    if (customerTel == "") {
+      alert("please fill the blanks");
+    }
     this.recyclingList(customerTel);
     form.customerTel.value = "";
   }
@@ -159,7 +161,7 @@ export default class RecyclingList extends React.Component {
             <legend>Search</legend>
             <div class="form-group">
               <label for="customerTel">customerTel</label>
-              <input type="text" class="form-control" id="customerTel"/>
+              <input type="number" class="form-control" id="customerTel"/>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

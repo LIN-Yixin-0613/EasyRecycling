@@ -10,7 +10,7 @@ export default class Login extends React.Component {
       console.log(password)
       if (password == "password") {
         console.log(password == "password")
-        this.props.history.replace('/')
+        this.props.history.replace('/AddRecycling')
       } else {
         alert("The password is wrong!");
       }
@@ -42,9 +42,9 @@ export default class Login extends React.Component {
     }
 }
 
-  Login.propTypes = {
-    loginValidate: PropTypes.func.isRequired,
-  };
+  // Login.propTypes = {
+  //   loginValidate: PropTypes.func.isRequired,
+  // };
 
           {/* <h3 style={{marginBottom:'10px', color:'#0066FF'}}>Cosmetic Packaging Recycling System</h3> */}
           {/* <hr style={{margin:'0 auto', width:'300px'}} /> */}

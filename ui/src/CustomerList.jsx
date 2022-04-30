@@ -66,7 +66,7 @@ export default class CustomerList extends React.Component {
             <legend>Search</legend>
             <div class="form-group">
               <label for="amount">amount</label>
-              <input type="text" class="form-control" id="amount"/>
+              <input type="number" class="form-control" id="amount"/>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
