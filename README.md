@@ -11,7 +11,7 @@ Please firstly install Node.js, NVM, and MongoDB, and then run the following com
 2. change to the master branch
 
    ```
-   cd ./Cosmetic_Packaging_Recycling_System
+   cd Cosmetic_Packaging_Recycling_System
    git checkout origin/master
    ```
 
@@ -24,14 +24,13 @@ Please firstly install Node.js, NVM, and MongoDB, and then run the following com
 4. open another shell and initialize the database
 
    ```shell
-   cd ./Cosmetic_Packaging_Recycling_System/api
+   cd Cosmetic_Packaging_Recycling_System/api
    mongo recycle scripts/init.mongo.js
    ```
 
-5. open another shell and run the backend code
+5. run the backend code (under the directory of ./Cosmetic_Packaging_Recycling_System/api)
 
    ```
-   cd ./Cosmetic_Packaging_Recycling_System/api
    npm install
    screen npm start
    ```
@@ -39,7 +38,7 @@ Please firstly install Node.js, NVM, and MongoDB, and then run the following com
 6. open another shell and compile and run the frontend code
 
    ```
-   cd ./Cosmetic_Packaging_Recycling_System/ui
+   cd Cosmetic_Packaging_Recycling_System/ui
    npm install
    npm run compile
    screen npm start
