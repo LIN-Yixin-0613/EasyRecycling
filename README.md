@@ -8,34 +8,27 @@ Please firstly install Node.js, NVM, and MongoDB, and then run the following com
    git clone https://github.com/LIN-Yixin-0613/EasyRecycling.git
    ```
 
-2. change to the master branch
-
-   ```
-   cd EasyRecycling
-   git checkout origin/master
-   ```
-
-3. run the mongodb
+2. run the mongodb
 
    ```shell
    mongod
    ```
 
-4. open another shell and initialize the database
+3. open another shell and initialize the database
 
    ```shell
    cd EasyRecycling/api
    mongo recycle scripts/init.mongo.js
    ```
 
-5. run the backend code (under the directory of ./EasyRecycling/api)
+4. run the backend code (under the directory of ./EasyRecycling/api)
 
    ```
    npm install
    screen npm start
    ```
 
-6. open another shell and compile and run the frontend code
+5. open another shell and compile and run the frontend code
 
    ```
    cd EasyRecycling/ui
