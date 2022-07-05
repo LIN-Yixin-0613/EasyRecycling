@@ -25,7 +25,7 @@ Please firstly install Node.js, NVM, and MongoDB, and then run the following com
 
    ```
    npm install
-   screen npm start
+   npm start
    ```
 
 5. open another shell and compile and run the frontend code
@@ -34,6 +34,6 @@ Please firstly install Node.js, NVM, and MongoDB, and then run the following com
    cd EasyRecycling/ui
    npm install
    npm run compile
-   screen npm start
+   npm start
    ```
 
