@@ -1,4 +1,4 @@
-# Cosmetic_Packaging_Recycling_System
+# EasyRecycling
 
 Please firstly install Node.js, NVM, and MongoDB, and then run the following commands (if you don't want to open a lot of shell mentioned below, please install Screen and use it)
 
