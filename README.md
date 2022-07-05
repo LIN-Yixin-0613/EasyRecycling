@@ -5,13 +5,13 @@ Please firstly install Node.js, NVM, and MongoDB, and then run the following com
 1. pull the code from Github
 
    ```
-   git clone https://github.com/LIN-Yixin-0613/Cosmetic_Packaging_Recycling_System.git
+   git clone https://github.com/LIN-Yixin-0613/EasyRecycling.git
    ```
 
 2. change to the master branch
 
    ```
-   cd Cosmetic_Packaging_Recycling_System
+   cd EasyRecycling
    git checkout origin/master
    ```
 
@@ -24,11 +24,11 @@ Please firstly install Node.js, NVM, and MongoDB, and then run the following com
 4. open another shell and initialize the database
 
    ```shell
-   cd Cosmetic_Packaging_Recycling_System/api
+   cd EasyRecycling/api
    mongo recycle scripts/init.mongo.js
    ```
 
-5. run the backend code (under the directory of ./Cosmetic_Packaging_Recycling_System/api)
+5. run the backend code (under the directory of ./EasyRecycling/api)
 
    ```
    npm install
@@ -38,7 +38,7 @@ Please firstly install Node.js, NVM, and MongoDB, and then run the following com
 6. open another shell and compile and run the frontend code
 
    ```
-   cd Cosmetic_Packaging_Recycling_System/ui
+   cd EasyRecycling/ui
    npm install
    npm run compile
    screen npm start
