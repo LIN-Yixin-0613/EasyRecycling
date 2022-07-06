@@ -1,3 +1,5 @@
+//express is a server side framework, so this file name is "uiserver"
+
 require('dotenv').config(); //read sample.env and so UI_SERVER_PORT and UI_API_ENDPOINT become properties of process.env
 //process.env.UI_API_ENDPOINT = http://localhost:3000/graphql
 //process.env.UI_SERVER_PORT = 8000
