@@ -9,6 +9,7 @@ const proxy = require('http-proxy-middleware');
 
 const app = express();
 
+//显然要指定html和app.bundle.js这些要传给浏览器的文件
 app.use(express.static('public'));
 
 //this part of API_PROXY_TARGET is unnecessary
@@ -22,12 +23,14 @@ const UI_API_ENDPOINT = process.env.UI_API_ENDPOINT
   || 'http://100.26.154.187:3000/graphql'; //why 100.26.154.187:3000/graphql?????
 const env = { UI_API_ENDPOINT };
 
+//to create a env.js file under / to store information of UI_API_ENDPOINT when the app runs???
 app.get('/env.js', (req, res) => {
   res.send(`window.ENV = ${JSON.stringify(env)}`); // ` is the same as ' or "
 });
 
 const port = process.env.UI_SERVER_PORT || 8000;
 
+//run the app on the port
 app.listen(port, () => {
   console.log(`UI started on port ${port}`);
 });
