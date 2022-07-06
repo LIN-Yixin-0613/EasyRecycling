@@ -1,6 +1,7 @@
 const { UserInputError } = require('apollo-server-express');
 const { getDb, getNextSequence } = require('./db.js');
 
+//根据电话号码获取所有记录
 async function list(_, {customerTel}) {
   const db = getDb();
   const filter = {};
@@ -9,12 +10,14 @@ async function list(_, {customerTel}) {
   return records;
 }
 
+//设定某个数量值 查出高于这个数量值的客户名单
 async function customerList(_, {amount}) {
   const db = getDb();
   const records = await db.collection('customers').find({amount: {$gte: amount}}).toArray();
   return records;
 }
 
+//根据电话号码查出客户名字
 async function getName(_, {customerTel}) {
   const db = getDb();
   const filter = {};
