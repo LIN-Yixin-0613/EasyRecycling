@@ -23,7 +23,8 @@ const UI_API_ENDPOINT = process.env.UI_API_ENDPOINT
   || 'http://100.26.154.187:3000/graphql'; //why 100.26.154.187:3000/graphql?????
 const env = { UI_API_ENDPOINT };
 
-//to create a env.js file under / to store information of UI_API_ENDPOINT when the app runs???
+//if someone go to localhost:port/env.js will see the message in res.send()
+//is it necessary????nobody wants to go to this address
 app.get('/env.js', (req, res) => {
   res.send(`window.ENV = ${JSON.stringify(env)}`); // ` is the same as ' or "
 });
