@@ -9,4 +9,5 @@ function getMessage() {
   return aboutMessage;
 }
 
+//将这两个函数暴露出去
 module.exports = { getMessage, setMessage };
