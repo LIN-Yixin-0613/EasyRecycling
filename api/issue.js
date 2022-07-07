@@ -1,8 +1,11 @@
 const { UserInputError } = require('apollo-server-express');
+//require('./db.js')意思就是加载之后运行这个脚本 和用<script>引入的性质是一致的
+//因为脚本里面let db了 所以现在上下文中已经有db这个变量了
 const { getDb, getNextSequence } = require('./db.js');
 
 //根据电话号码获取所有记录
 async function list(_, {customerTel}) {
+  //因为上下文中已经有db了 所以getDb()可以获取这个变量
   const db = getDb();
   const filter = {};
   filter.customerTel = customerTel;
