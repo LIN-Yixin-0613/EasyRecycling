@@ -37,8 +37,10 @@ const server = new ApolloServer({
 
 function installHandler(app) {
   //sample.env里面的ENABLE_CORS被注释掉了
+  //这里可以直接写const enableCors = 'true' 
   const enableCors = (process.env.ENABLE_CORS || 'true') === 'true';
   console.log('CORS setting:', enableCors);
+  //可以多了解一下cors这个参数是干什么的
   server.applyMiddleware({ app, path: '/graphql', cors: enableCors });
 }
 
