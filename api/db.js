@@ -4,7 +4,7 @@ const { MongoClient } = require('mongodb');
 let db;
 
 async function connectToDb() {
- //会读取到
+ //会读取到issuetracker
   const url = process.env.DB_URL || 'mongodb://localhost/recycle';
   const client = new MongoClient(url, { useNewUrlParser: true });
   await client.connect();
