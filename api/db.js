@@ -8,6 +8,7 @@ async function connectToDb() {
   const url = process.env.DB_URL || 'mongodb://localhost/recycle';
   const client = new MongoClient(url, { useNewUrlParser: true });
   await client.connect();
+ //这个函数执行结束之后 这个连接还会继续存在吗？
   console.log('Connected to MongoDB at', url);
   db = client.db();
 }
