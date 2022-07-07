@@ -7,6 +7,7 @@ const GraphQLDate = require('./graphql_date.js');
 const issue = require('./issue.js');
 
 const resolvers = {
+  //有一些是多余的 因为前端只会用五个函数
   Query: {
     // about: about.getMessage,
     // issueList: issue.list,
